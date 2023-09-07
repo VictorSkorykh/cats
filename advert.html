@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/kiska_logo.png" type="image/x-icon" />
+    <title>Объявления о продаже, покупке кошек, котов, котят. Отдам в хорошие руки.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="jquery.min.js"></script>
+  <script src="jquery.maskedinput.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo_block"><a href="index.html" title="На главную"><img src="img/artboard-10_89054.png" alt="" width="45"><span>Cats.info</span></a></div>
+            <div class="header_title">Милые и пушистые питомцы</div>
+            <div class="personal_block">
+                <div id="register_link_for_form" class="register_link" title="Регистрация нового пользователя" onclick="registerPerson()">Регистрация</div>
+                
+                <div class="login_link" title="Вход в систему" onclick="enterPerson()">Вход</div>
+            </div>
+        </div>
+        <div class="main">
+        <div id="nav">
+            <a href="index.html" title="Главная страница"><p>Главная</p></a>
+            <a href="cats.html" title="Все о котах"><p>Коты</p></a>
+            <a href="coshki.html" title="Все о кошках"><p>Кошки</p></a>
+            <a href="interest.html" title="Интересное из жизни кошек"><p>Интересное</p></a>
+            <a href="advert.html" title="Объявления о продаже котов и кошек" class="active"><p>Продам/отдам</p></a>
+            <a href="shop.html" title="Магазин кормов"><p>Магазин кормов</p></a>
+            <a href="hostel.html" title="Гостиница для передержки кошек"><p>Гостиница</p></a>
+            <a href="exhibitions.html" title="Даты выставок кошек"><p>Выставки</p></a>
+            <a href="contacts.html" title="Контакты администрации сайта"><p>Контакты</p></a>
+        </div>
+
+<div id="content">
+            <h2>
+                Объявления о продаже котят
+            </h2>
+            <form class="search_form_advert" enctype="multipart/form-data" method="get" action="handler.php">
+            <select name="select_animal" class="form_box">dfgfd
+                <option>Выберите тип объявлений</option>
+                <option>--</option>
+                <option value="all_advert">Все объявления</option>
+                <optgroup label="Продам">
+                    <option value="cat_male">Коты</option>
+                    <option value="cat_female">Кошки</option>
+                    <option value="cat-pussy">Котята</option>
+                </optgroup>
+                <optgroup label="Отдам">
+                    <option value="cat_male">Коты</option>
+                    <option value="cat_female">Кошки</option>
+                    <option value="cat-pussy">Котята</option>
+                    </optgroup>
+            </select>
+            </form>
+            <br>
+<div class="advert" title="Перейти к объявлению">
+                <div class="advert_img">
+                <img class="advert_img_item" src="img/kotikk3.jpg" alt="" title="Милые котятки">
+                </div>
+                <div class="advert_text">Продам котенка. Яна очень ласковая и добрая кошечка, как только ей протягиваешь руку, она сразу тянется к ней и ласкается об неё. Она чисто белая без единого пятнышка и очень пушистая. Мы нашли её на улице.</div>
+                <div class="advert_contacts">
+                    <div class="advert_city"><b>Новокузнецк</b></div>
+                    <div class="advert_name">Ангелина</div>
+                    <div class="call_mail">
+                    <div class="advert_call advert_button" title="Позвонить владельцу">📱 Позвонить</div>
+                    <div class="advert_mail advert_button" title="Написать владельцу">✉ Написать</div>
+                    </div>
+                </div>
+</div>
+<div class="advert" title="Перейти к объявлению">
+                <div class="advert_img">
+                <img class="advert_img_item" src="img/kotikk2.jpg" alt="" title="Милые котятки">
+                </div>
+                <div class="advert_text">Профессиональный питомник породы Канадский сфинкс. Открываю резерв. Мальчик и две девочки. Малыши смогут переехатьв новый дом в возрасте не ранее четырех месцев (т. Е в мае), привиты, чипированы. Цена в домашние любимцы — 20 000руб. С учетом моих</div>
+                <div class="advert_contacts">
+                    <div class="advert_city"><b>Москва</b></div>
+                    <div class="advert_name">Тимати</div>
+                    <div class="call_mail">
+                    <div class="advert_call advert_button" title="Позвонить владельцу">📱 Позвонить</div>
+                    <div class="advert_mail advert_button" title="Написать владельцу">✉ Написать</div>
+                    </div>
+                </div>
+</div>
+<div class="advert" title="Перейти к объявлению">
+    <div class="advert_img">
+    <img class="advert_img_item" src="img/kotikk4.jpg" alt="" title="Милые котятки">
+    </div>
+    <div class="advert_text">Отдам милого котенка в добрые руки.</div>
+    <div class="advert_contacts">
+        <div class="advert_city"><b>Тверь</b></div>
+        <div class="advert_name">Тамара Петровна</div>
+        <div class="call_mail">
+        <div class="advert_call advert_button" title="Позвонить владельцу">📱 Позвонить</div>
+        <div class="advert_mail advert_button" title="Написать владельцу">✉ Написать</div>
+        </div>
+    </div>
+</div>
+            
+            
+            
+        </div>
+
+        <div id="aside">
+            <span>Статистика посещения:</span>
+            <p>За последние 24 часа:<br> 2 человека</p>
+            <p>За последнее время:<br> 4 человека</p>
+        </div>
+        
+        
+    </div>
+        
+
+    <div id='modal' class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" title="Закрыть">X</span>
+                <h1>Регистрация</h1><br>
+                <div id="formInner">
+                    <form action="" id='createPersonForm' class="create-form-person" method="GET">
+                        <label for="Email">Введите почту:*</label>
+                        <input type="email" name="mail" id="Email" value="" placeholder="E-mail" required><br>
+                        <label for="password">Введите пароль:*</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Пароль" required><br>
+                        <label for="password2">Повторить пароль:*</label>
+                        <input type="password" name="password2" id="password2" value="" placeholder="Повторите пароль" required><br>
+                        <h2>Личные данные</h2><br>
+                        <label for="Fio">ФИО:*</label>
+                        <input type="text" name="fio" id="fio" value="" placeholder="ФИО" required><br>
+                        <label for="phone">Номер телефона:*</label>
+                        <input type="tel" name="phone" id="phone" class="mask-phone" value="" placeholder='+7 (___) ___-__-__' required><br>
+                        <script>
+                            
+            $(function($) {
+               $('input[name="phone"]').mask("+7 (999) 999-99-99");
+            });
+       
+                            </script>
+                        <label for="region">Выберите регион:*</label>
+                        <select required name="region" id="region" value="" onchange="chooseRegion(this.value)">
+                            <option value="">--Выберите регион--</option>
+                            <option value="Кемеровская область">Кемеровская область</option>
+                            <option value="Московская область">Московская область</option>
+                            <option value="Нижегородская область">Нижегородская область</option>
+            
+                        </select><br>
+                        <label for="city">Выберите город:*</label>
+                        <select required name="city" id="city" value="">
+                            <option value="" id="citySelect">--Выберите город--</option>
+                            <!--<option class="chooseCity hidden">Москва</option>
+                            <option class="chooseCity hidden">Новокузнецк</option>
+                            <option class="chooseCity hidden">Нижний Новгород</option>-->
+            
+                        </select><br><br>
+                        <input type="submit" value="Зарегистрироваться" id="button-click-createPerson">
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div id='modalEnterPerson' class="modal">
+        <div class="modal-content modalEnterPersonStyle">
+            <span class="close" onclick="closeEnterPerson()" title="Закрыть">X</span>
+                <h1>Вход в личный кабинет</h1><br>
+                <div id="enterPersonForm">
+                    <form action="" id='enterPersonForm' class="enter-form-person" method="GET">
+                        <label for="Email">Введите почту:*</label>
+                        <input type="email" name="mail" id="Email" value="" placeholder="E-mail" required><br>
+                        <label for="password">Введите пароль:*</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Пароль" required><br>
+                        </select><br><br>
+                        <input type="submit" value="Войти" id="button-click-enterPerson">
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div id='modalImg' class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" title="Закрыть">X</span>
+            <img class="galery_img" alt="Коты" title="Фотографии котов"">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="layer_block"><a href="">Пользовательское соглашение</a><a href="">Политика конфиденциальности</a>
+        </div>
+        <div>&copy; <span id="date-now"></span>. Сайт о котах.</div>
+        <div class="messengers_block">
+            <a href="" title="Мы в VK"><img src="img/vk_logo.png" alt="" width="45"></a>
+            <a href="" title="Мы в OK"><img src="img/ok_logo.png" alt="" width="45"></a>
+        </div>
+    </div>
+</div>
+<script>$(() => {
+    $('#date-now').text(new Date().getFullYear());
+   });</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/kiska_logo.png" type="image/x-icon" />
+    <title>О жизни котов и кошек в доме</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="jquery.min.js"></script>
+  <script src="jquery.maskedinput.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo_block"><a href="index.html" title="На главную"><img src="img/artboard-10_89054.png" alt="" width="45"><span>Cats.info</span></a></div>
+            <div class="header_title">Милые и пушистые питомцы</div>
+            <div class="personal_block">
+                <div id="register_link_for_form" class="register_link" title="Регистрация нового пользователя" onclick="registerPerson()">Регистрация</div>
+                
+                <div class="login_link" title="Вход в систему" onclick="enterPerson()">Вход</div>
+            </div>
+        </div>
+        <div class="main">
+        <div id="nav">
+            <a href="index.html" title="Главная страница""><p>Главная</p></a>
+            <a href="cats.html" title="Все о котах"><p>Коты</p></a>
+            <a href="coshki.html" title="Все о кошках"><p>Кошки</p></a>
+            <a href="interest.html" title="Интересное из жизни кошек"><p>Интересное</p></a>
+            <a href="advert.html" title="Объявления о продаже котов и кошек"><p>Продам/отдам</p></a>
+            <a href="shop.html" title="Магазин кормов"><p>Магазин кормов</p></a>
+            <a href="hostel.html" title="Гостиница для передержки кошек"><p>Гостиница</p></a>
+            <a href="exhibitions.html" title="Даты выставок кошек"><p>Выставки</p></a>
+            <a href="contacts.html" title="Контакты администрации сайта" class="active"><p>Контакты</p></a>
+        </div>
+        
+
+        <div id="content">
+            <h2>
+                Контакты
+            </h2>
+        </br>
+        <address>
+            <p>634000 Тамбовская область, г. Котовск, ул. Куклачева</p>
+                <p><b>Тел:</b><a href='tel:+79999999999' style="color:rgb(223, 243, 243);text-decoration: none;"> 8 (999) 999 99-99</a></p>
+                <p><b>E-mail:</b><a href="mailto:mail@cats.info" style="color:rgb(223, 243, 243);text-decoration: none;"> mail@cats.info</a></p>
+        </address>
+        <br>
+        <h2>
+            Напишите сообщение
+        </h2>
+        <br>
+        <div class="forma">
+            <form class="form-at" method="get">
+                <div class="validate-input-at w-50">
+                    <input class="input-at" type="text" name="name" placeholder="Ваше имя" />
+                    <span class="focus-input-at"></span>
+                </div>
+                <div class="validate-input-at w-50">
+                    <input class="input-at" type="text" name="email" placeholder="Телефон или email" />
+                    <span class="focus-input-at"></span>
+                </div>
+                <div class="validate-input-at">
+                    <textarea class="input-at" name="message_text" placeholder="Ваше сообщение"></textarea>
+                    <span class="focus-input-at"></span>
+                </div>
+                <button id="submit-at" class="form-at-btn">Отправить</button>
+            </form>
+            <div class="result-at"></div>
+        </div>
+        <br><br>
+        </div>
+
+        
+
+        <div id="aside">
+            <span>Статистика посещения:</span>
+            <p>За последние 24 часа:<br> 2 человека</p>
+            <p>За последнее время:<br> 4 человека</p>
+        </div>
+        
+      
+    </div>
+
+    <div id='modal' class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()" title="Закрыть">X</span>
+                <h1>Регистрация</h1><br>
+                <div id="formInner">
+                    <form action="" id='createPersonForm' class="create-form-person" method="GET">
+                        <label for="Email">Введите почту:*</label>
+                        <input type="email" name="mail" id="Email" value="" placeholder="E-mail" required><br>
+                        <label for="password">Введите пароль:*</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Пароль" required><br>
+                        <label for="password2">Повторить пароль:*</label>
+                        <input type="password" name="password2" id="password2" value="" placeholder="Повторите пароль" required><br>
+                        <h2>Личные данные</h2><br>
+                        <label for="Fio">ФИО:*</label>
+                        <input type="text" name="fio" id="fio" value="" placeholder="ФИО" required><br>
+                        <label for="phone">Номер телефона:*</label>
+                        <input type="tel" name="phone" id="phone" class="mask-phone" value="" placeholder='+7 (___) ___-__-__' required><br>
+                        <script>
+                            
+            $(function($) {
+               $('input[name="phone"]').mask("+7 (999) 999-99-99");
+            });
+       
+                            </script>
+                        <label for="region">Выберите регион:*</label>
+                        <select required name="region" id="region" value="" onchange="chooseRegion(this.value)">
+                            <option value="">--Выберите регион--</option>
+                            <option value="Кемеровская область">Кемеровская область</option>
+                            <option value="Московская область">Московская область</option>
+                            <option value="Нижегородская область">Нижегородская область</option>
+            
+                        </select><br>
+                        <label for="city">Выберите город:*</label>
+                        <select required name="city" id="city" value="">
+                            <option value="" id="citySelect">--Выберите город--</option>
+                            <!--<option class="chooseCity hidden">Москва</option>
+                            <option class="chooseCity hidden">Новокузнецк</option>
+                            <option class="chooseCity hidden">Нижний Новгород</option>-->
+            
+                        </select><br><br>
+                        <input type="submit" value="Зарегистрироваться" id="button-click-createPerson">
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div id='modalEnterPerson' class="modal">
+        <div class="modal-content modalEnterPersonStyle">
+            <span class="close" onclick="closeEnterPerson()" title="Закрыть">X</span>
+                <h1>Вход в личный кабинет</h1><br>
+                <div id="enterPersonForm">
+                    <form action="" id='enterPersonForm' class="enter-form-person" method="GET">
+                        <label for="Email">Введите почту:*</label>
+                        <input type="email" name="mail" id="Email" value="" placeholder="E-mail" required><br>
+                        <label for="password">Введите пароль:*</label>
+                        <input type="password" name="password" id="password" value="" placeholder="Пароль" required><br>
+                        </select><br><br>
+                        <input type="submit" value="Войти" id="button-click-enterPerson">
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        //Форма отправки данных в контактах
+const formAt = document.querySelector('.form-at');
+const submitAt = document.getElementById('submit-at');
+
+
+submitAt.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    let name = formAt.name.value;
+    let email = formAt.email.value;
+    let message_text = formAt.message_text.value;
+
+    if(name=='' || email=="" || message_text==""){
+        document.querySelector('.result-at').innerHTML = 'Заполните все поля!'
+    }
+    else{
+        document.querySelector('.result-at').innerHTML = 'Данные успешно отправлены!'
+    }
+
+});
+    </script>
+
+<div id="footer">
+    <div class="layer_block"><a href="">Пользовательское соглашение</a><a href="">Политика конфиденциальности</a>
+    </div>
+    <div>&copy; <span id="date-now"></span>. Сайт о котах.</div>
+    <div class="messengers_block">
+        <a href="" title="Мы в VK"><img src="img/vk_logo.png" alt="" width="45"></a>
+        <a href="" title="Мы в OK"><img src="img/ok_logo.png" alt="" width="45"></a>
+    </div>
+</div>
+</div>
+<script>$(() => {
+$('#date-now').text(new Date().getFullYear());
+});</script>
+</body>
+</html>
